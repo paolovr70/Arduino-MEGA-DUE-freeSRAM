@@ -35,8 +35,8 @@ void loop() {
   delay (1000);
 }
 
-uint32_t getFreeSram() { //ARDUINO MEGA2560
- #if defined(ARDUINO_SAM_DUE) 
+uint32_t getFreeSram() { 
+ #if defined(ARDUINO_SAM_DUE) // ARM_ARDUINO_DUE
    char *ramstart=(char *)0x20070000;
    char *ramend=(char *)0x20088000;
    char *heapend=sbrk(0);
